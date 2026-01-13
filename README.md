@@ -31,4 +31,29 @@ Keep it simple. Keep it brutal. Keep it functional.
 
 ---
 
+## A Little Dino's Tale
+
+```
+A tiny dino, pencil in claw,
+Writes his notes without a flaw.
+Each thought preserved, each memory bright,
+In black and white, so crisp and light.
+
+No fancy features, no complex maze,
+Just simple notes for simple days.
+He clicks and types with pure delight,
+His notepad glowing through the night.
+
+Auto-save keeps his words so safe,
+No need to worry, no need to chafe.
+First line's the title, clean and neat,
+His system simple, his joy complete.
+
+A happy dino, content and free,
+With his notes app, as it should be.
+🦖
+```
+
+---
+
 Made with 🦖 vibes
