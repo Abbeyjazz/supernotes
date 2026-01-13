@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🦖 SUPERNOTES</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🦖 SUPERNOTES</h1>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search notes..." />
+            </div>
+
+            <div class="notes-list" id="notesList">
+                <!-- Notes will be dynamically added here -->
+            </div>
+
+            <button id="newNoteBtn" class="new-note-btn">+ NEW NOTE</button>
+        </aside>
+
+        <main class="editor">
+            <div id="editorPlaceholder" class="editor-placeholder">
+                <p>← Select a note or create a new one</p>
+            </div>
+            <div id="editorContent" class="editor-content" style="display: none;">
+                <textarea id="noteTextarea" placeholder="Start typing..."></textarea>
+                <div class="note-info">
+                    <span id="noteDate"></span>
+                    <span id="charCount">0 characters</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
