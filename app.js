@@ -12,10 +12,12 @@ const editorPlaceholder = document.getElementById('editorPlaceholder');
 const editorContent = document.getElementById('editorContent');
 const noteDate = document.getElementById('noteDate');
 const charCount = document.getElementById('charCount');
+const darkModeToggle = document.getElementById('darkModeToggle');
 
 // Initialize app
 function init() {
     loadNotes();
+    loadDarkMode();
     renderNotes();
     attachEventListeners();
 }
@@ -31,6 +33,30 @@ function loadNotes() {
 // Save notes to localStorage
 function saveNotes() {
     localStorage.setItem('supernotes', JSON.stringify(notes));
+}
+
+// Load dark mode preference
+function loadDarkMode() {
+    const darkMode = localStorage.getItem('darkMode');
+    if (darkMode === 'enabled') {
+        document.body.classList.add('dark-mode');
+        darkModeToggle.textContent = '🌙';
+    } else {
+        darkModeToggle.textContent = '☀️';
+    }
+}
+
+// Toggle dark mode
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+
+    if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'enabled');
+        darkModeToggle.textContent = '🌙';
+    } else {
+        localStorage.setItem('darkMode', 'disabled');
+        darkModeToggle.textContent = '☀️';
+    }
 }
 
 // Generate unique ID
@@ -181,6 +207,9 @@ function scheduleAutoSave() {
 function attachEventListeners() {
     // New note button
     newNoteBtn.addEventListener('click', createNote);
+
+    // Dark mode toggle
+    darkModeToggle.addEventListener('click', toggleDarkMode);
 
     // Note textarea - auto-save
     noteTextarea.addEventListener('input', scheduleAutoSave);
