@@ -2,6 +2,10 @@
 
 Ultra-minimalist note-taking app with early web brutalist aesthetics.
 
+## 🌐 Live Demo
+
+**Try it now:** [https://supernotedino.netlify.app/](https://supernotedino.netlify.app/)
+
 ## Features
 
 - ✍️ Create and edit notes
